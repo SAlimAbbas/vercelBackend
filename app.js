@@ -5,10 +5,12 @@ const bycrypt=require("bcryptjs")
 const User = require("./model/user")
 const Task = require("./model/task")
 var jwt = require('jsonwebtoken');
+const cors=require('cors');
 const auth=require("./middleware/auth")
 // const cookieParser = require("cookie-parser")
 
-const app=express()
+const app=express();
+app.use(cors());
 app.use(express.json())
 // app.use(cookieParser())
 
