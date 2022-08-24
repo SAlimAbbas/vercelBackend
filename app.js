@@ -45,7 +45,7 @@ app.post("/signup",async(req,res)=>{
 
     user.token=token
     // user.password=undefined
-    res.status(201).json(user)
+    res.status(201).send(user)
     
  } catch (error) {
     console.log(error);
@@ -79,7 +79,7 @@ app.post("/login",async(req,res)=>{
             user.token=token
             user.password=undefined
             // to access in header from fromnt end
-            return res.status(201).json(user)
+            return res.status(201).send(user)
 
             
         }
